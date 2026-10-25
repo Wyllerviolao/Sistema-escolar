@@ -83,21 +83,34 @@ st.markdown("""
         <meta name="google" content="notranslate">
     </head>
     <style>
-        html, body, .stApp {
-            -webkit-translate: no !important;
-            -moz-translate: no !important;
-            -ms-translate: no !important;
-            translate: no !important;
-        }
-        [data-testid="stHeader"], .stAppHeader, header {
-            display: none !important;
-            height: 0px !important;
-        }
-        [data-testid="stSidebar"] {
-            min-width: 16rem !important;
-            max-width: 16rem !important;
-        }
-        .block-container {
+html, body, .stApp {
+    -webkit-translate: no !important;
+    -moz-translate: no !important;
+    -ms-translate: no !important;
+    translate: no !important;
+}
+
+/* Mantém o cabeçalho visível no telemóvel para o botão da barra lateral aparecer */
+@media (max-width: 768px) {
+    [data-testid="stHeader"], .stAppHeader, header {
+        display: block !important;
+        background-color: transparent !important;
+    }
+}
+
+/* No computador, continua a ocultar se preferir o visual limpo */
+@media (min-width: 769px) {
+    [data-testid="stHeader"], .stAppHeader, header {
+        display: none !important;
+        height: 0px !important;
+    }
+}
+
+[data-testid="stsidebar"] {
+    min-width: 16rem !important;
+    max-width: 16rem !important;
+}
+</style>        .block-container {
             padding-top: 0.3rem !important;
             padding-bottom: 0.5rem !important;
             padding-left: 1rem !important;
