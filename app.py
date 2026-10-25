@@ -79,17 +79,7 @@ st.set_page_config(
 
 # Estilização CSS refinada + Trava de Tradução
 st.markdown("""
-    <head>
-        <meta name="google" content="notranslate">
-    </head>
     <style>
-    html, body, .stApp {
-        -webkit-translate: no !important;
-        -moz-translate: no !important;
-        -ms-translate: no !important;
-        translate: no !important;
-    }
-
     /* Mantém o cabeçalho visível no telemóvel para o botão da barra lateral aparecer */
     @media (max-width: 768px) {
         [data-testid="stHeader"], .stAppHeader, header {
@@ -119,7 +109,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-            padding-bottom: 0.5rem !important;
+padding-bottom: 0.5rem !important;
             padding-left: 1rem !important;
             padding-right: 1rem !important;
         }
