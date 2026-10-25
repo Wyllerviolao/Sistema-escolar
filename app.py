@@ -110,11 +110,7 @@ st.markdown("""
         min-width: 16rem !important;
         max-width: 16rem !important;
     }
-    </style>
-""", unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
     .block-container {
         padding-top: 0.3rem !important;
         padding-bottom: 0.5rem !important;
