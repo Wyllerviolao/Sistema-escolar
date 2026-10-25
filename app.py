@@ -118,8 +118,6 @@ st.markdown("""
         padding-right: 1rem !important;
     }
     </style>
-""", unsafe_allow_html=True)
-padding-top: 0.3rem !important;
             padding-bottom: 0.5rem !important;
             padding-left: 1rem !important;
             padding-right: 1rem !important;
