@@ -113,8 +113,7 @@ st.markdown("""
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    st.markdown("""<style>@media (max-width: 768px) { [data-testid="stHeader"], .stAppHeader, header { display: block !important; background-color: transparent !important; } } @media (min-width: 769px) { [data-testid="stHeader"], .stAppHeader, header { display: none !important; height: 0px !important; } } [data-testid="stsidebar"] { min-width: 16rem !important; max-width: 16rem !important; } .block-container { padding-top: 0.3rem !important; padding-bottom: 0.5rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }</style>""", unsafe_allow_html=True)
-            section[data-testid="stSidebar"] div.element-container {
+    st.markdown('<style>@media (max-width: 768px) { [data-testid="stHeader"], .stAppHeader, header { display: block !important; background-color: transparent !important; } } @media (min-width: 769px) { [data-testid="stHeader"], .stAppHeader, header { display: none !important; height: 0px !important; } } [data-testid="stsidebar"] { min-width: 16rem !important; max-width: 16rem !important; } .block-container { padding-top: 0.3rem !important; padding-bottom: 0.5rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }</style>', unsafe_allow_html=True)            section[data-testid="stSidebar"] div.element-container {
             margin-bottom: 0.1rem !important;
         }
         section[data-testid="stSidebar"] hr {
