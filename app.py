@@ -109,7 +109,6 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-padding-bottom: 0.5rem !important;
             padding-left: 1rem !important;
             padding-right: 1rem !important;
         }
