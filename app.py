@@ -110,7 +110,8 @@ html, body, .stApp {
     min-width: 16rem !important;
     max-width: 16rem !important;
 }
-</style>        .block-container {
+</style>
+.block-container {
             padding-top: 0.3rem !important;
             padding-bottom: 0.5rem !important;
             padding-left: 1rem !important;
