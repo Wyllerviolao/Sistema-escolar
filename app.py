@@ -80,6 +80,14 @@ st.set_page_config(
 # Estilização CSS refinada + Trava de Tradução
 st.markdown("""
     <style>
+    /* Trava de Tradução */
+    html, body, .stApp {
+        -webkit-translate: no !important;
+        -moz-translate: no !important;
+        -ms-translate: no !important;
+        translate: no !important;
+    }
+
     /* Mantém o cabeçalho visível no telemóvel para o botão da barra lateral aparecer */
     @media (max-width: 768px) {
         [data-testid="stHeader"], .stAppHeader, header {
@@ -107,94 +115,97 @@ st.markdown("""
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    .block-container {
-        padding-top: 0.3rem !important;
-        padding-bottom: 0.5rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+
+    section[data-testid="stSidebar"] div.element-container {
+        margin-bottom: 0.1rem !important;
     }
-    st.markdown('<style>@media (max-width: 768px) { [data-testid="stHeader"], .stAppHeader, header { display: block !important; background-color: transparent !important; } } @media (min-width: 769px) { [data-testid="stHeader"], .stAppHeader, header { display: none !important; height: 0px !important; } } [data-testid="stsidebar"] { min-width: 16rem !important; max-width: 16rem !important; } .block-container { padding-top: 0.3rem !important; padding-bottom: 0.5rem !important; padding-left: 1rem !important; padding-right: 1rem !important; }</style>', unsafe_allow_html=True)            section[data-testid="stSidebar"] div.element-container {
-            margin-bottom: 0.1rem !important;
-        }
-        section[data-testid="stSidebar"] hr {
-            margin-top: 0.2rem !important;
-            margin-bottom: 0.2rem !important;
-        }
-        div.stButton > button {
-            width: 100% !important;
-            min-width: 26px !important;
-            height: 25px !important;
-            padding: 0px !important;
-            font-size: 13px !important;
-            font-weight: bold !important;
-            line-height: 23px !important;
-            border-radius: 3px !important;
-            border: 1px solid #d0d0d0 !important;
-            margin: 0px !important;
-        }
-        div[data-testid="column"] {
-            text-align: center !important;
-            padding: 0px 1px !important;
-        }
-        div[data-testid="column"] p {
-            margin: 0px !important;
-            line-height: 1.2 !important;
-            white-space: nowrap !important;
-        }
-        .nome-aluno-box {
-            font-size: 0.78rem !important;
-            font-weight: bold !important;
-            text-align: left !important;
-            word-wrap: break-word !important;
-            overflow-wrap: break-word !important;
-            white-space: normal !important;
-            line-height: 1.1 !important;
-            padding-right: 2px !important;
-        }
-        .nome-aluno-inativo {
-            font-size: 0.75rem !important;
-            font-weight: bold !important;
-            color: #856404 !important;
-            background-color: #fff3cd !important;
-            padding: 2px 4px !important;
-            border-radius: 3px !important;
-            text-align: left !important;
-            line-height: 1.1 !important;
-        }
-        .msg-sucesso-block {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            padding: 10px 14px !important;
-            background-color: #d1e7dd !important;
-            color: #0f5132 !important;
-            border: 1px solid #badbcc !important;
-            border-radius: 8px !important;
-            font-size: 0.88rem !important;
-            font-weight: 600 !important;
-            margin-top: 10px !important;
-            width: 100% !important;
-            text-align: center !important;
-        }
-        .welcome-card {
-            background-color: #f8f9fa;
-            border-left: 5px solid #0d6efd;
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-        .footer-manual {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 1rem;
-            border-top: 1px solid #eaeaea;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
+    
+    section[data-testid="stSidebar"] hr {
+        margin-top: 0.2rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+    
+    div.stButton > button {
+        width: 100% !important;
+        min-width: 26px !important;
+        height: 25px !important;
+        padding: 0px !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        line-height: 23px !important;
+        border-radius: 3px !important;
+        border: 1px solid #d0d0d0 !important;
+        margin: 0px !important;
+    }
+    
+    div[data-testid="column"] {
+        text-align: center !important;
+        padding: 0px 1px !important;
+    }
+    
+    div[data-testid="column"] p {
+        margin: 0px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+    
+    .nome-aluno-box {
+        font-size: 0.78rem !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.1 !important;
+        padding-right: 2px !important;
+    }
+    
+    .nome-aluno-inativo {
+        font-size: 0.75rem !important;
+        font-weight: bold !important;
+        color: #856404 !important;
+        background-color: #fff3cd !important;
+        padding: 2px 4px !important;
+        border-radius: 3px !important;
+        text-align: left !important;
+        line-height: 1.1 !important;
+    }
+    
+    .msg-sucesso-block {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 14px !important;
+        background-color: #d1e7dd !important;
+        color: #0f5132 !important;
+        border: 1px solid #badbcc !important;
+        border-radius: 8px !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+        margin-top: 10px !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .welcome-card {
+        background-color: #f8f9fa;
+        border-left: 5px solid #0d6efd;
+        padding: 1.5rem;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-manual {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 1rem;
+        border-top: 1px solid #eaeaea;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
     </style>
 """, unsafe_allow_html=True)
-
 # Funções auxiliares
 def get_db():
     db = SessionLocal()
