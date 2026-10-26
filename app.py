@@ -10,7 +10,10 @@ from database import SessionLocal, engine, Base
 from models import Turma, Aluno, Usuario, Nota, FrequenciaDiaria, CalendarioEscolar, DisciplinaEscola, EventoCalendario, RegistroConteudo, GradeHorario
 
 # Inicializa/atualiza as tabelas no banco de dados
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+except Exception as e:
+    st.warning(f"Aviso de ligação à base de dados: {e}")
 
 # Correções preventivas e seguras para garantir colunas na base existente
 def garantir_colunas_banco():
